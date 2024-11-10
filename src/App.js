@@ -30,11 +30,11 @@ function App() {
       <Nav />
       <div>
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/characters" element={<Characters />} />
-          <Route path="/characters/:id" element={<Character />} />
-          <Route path="/locations" element={<Locations />} />
-          <Route path="/episodes" element={<Episodes />} />
+          <Route path="rickandmortywiki/" element={<Main />} />
+          <Route path="rickandmortywiki/characters" element={<Characters />} />
+          <Route path="rickandmortywiki/characters/:id" element={<Character />} />
+          <Route path="rickandmortywiki/locations" element={<Locations />} />
+          <Route path="rickandmortywiki/episodes" element={<Episodes />} />
         </Routes>
       </div>
       <Footer />
