@@ -20,7 +20,7 @@ export default function Main() {
           href="https://www.adultswim.com/videos/rick-and-morty"
           target="blank"
         >
-          <img src={Tv} alt="Rick & Morty" />
+          <img src={Tv} alt="Rick & Morty" className="w-1/2 mx-auto" />
         </a>
       </div>
     </>

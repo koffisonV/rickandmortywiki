@@ -25,7 +25,7 @@ export default function Locations() {
     } catch (e) {
       console.error(e);
     }
-  }, [currentPage]);
+  }, [currentPage, setLocations, setTotalPages]);
 
   function handlePrevPage() {
     if (currentPage > 1) {
@@ -47,12 +47,14 @@ export default function Locations() {
         </h1>
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {locations.map((location) => (
-            <li key={location.id} >
-            <article key={location.id} className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-3xl font-semibold text-orange-400 p-3" >{location.name}</h2>
-              <p className="text-gray-600 p-4">{location.type}</p>
-              <p className="text-gray-600 p-4">{location.dimension}</p>
-            </article>
+            <li key={location.id}>
+              <article className="bg-white p-6 rounded-lg shadow-md h-[200px] flex flex-col justify-between">
+                <h2 className="text-2xl font-semibold text-orange-400 mb-4">{location.name}</h2>
+                <div>
+                  <p className="text-gray-600 mb-2">Type: {location.type}</p>
+                  <p className="text-gray-600">Dimension: {location.dimension}</p>
+                </div>
+              </article>
             </li>
           ))}
         </ul>
