@@ -38,10 +38,15 @@ jobs:
       
       - name: Build
         run: npm run build
+        env:
+          CI: false
       
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+
+      - name: Create .nojekyll file
+        run: touch build/.nojekyll
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
